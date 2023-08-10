@@ -1,0 +1,68 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+.container1 li{
+    display: inline;
+    padding: 5px;
+    font-size: 23px;
+    cursor: pointer;
+    color: green;
+    width:fit-content;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, orange 60%, cyan);
+    
+    /* background-color:springgreen; */
+    /* margin-top: 100px; */
+}
+input[type=text] ,input[type=password] ,input[type=email] {
+    font-size: 19px;
+    outline: none;
+}
+h1{
+    color: red;
+}
+p{
+    font-size: 20px;
+}
+.button{
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    border: none;
+    box-sizing: border-box;
+    width:400px;
+    background-color:green;
+    opacity: 1.0;
+}
+.button:hover{
+    opacity: 0.8;
+}
+.container{
+    background-color: mediumturquoise;
+
+    
+    width:fit-content;
+    
+
+}
+.formerror{
+    color: red;
+    font-size: 15px;
+}
+@media screen and (max-width: 800px){
+    body{
+          background:linear-gradient(.25turn, red, 60%, blue);
+         
+    }
+    
+}
+/* @media screen and (max-width:800px){
+    body{
+        background-color:turquoise;
+    }
+} */

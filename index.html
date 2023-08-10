@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+
+<body>
+    <center>
+        <h1>Registration Form</h1>
+    
+    <div class="container">
+        <form class="form" action="index.php" name="form" onsubmit="return validateform()" method="post">
+            
+            <div class="container1">
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </div>
+            <p>Name</p>
+            <div class="form" id="name">
+                <input type="text"  placeholder="Name"  size="40" name="nameid" required><b> <span class="formerror"></span></b>
+
+            </div>
+            <div class="form" id="email">
+                <p>Email id</p>
+            <input type="email" name="emailid"  placeholder="Enter Email id"  size="40" required><b> <span class="formerror"></span></b>
+        </div>
+            <p>Mobile Number</p>
+
+            
+            <div class="form" id="phone">
+                <input type="text" name="phoneid" placeholder="Enter Mobile No." size="40" required><b> <span class="formerror"></span></b>
+                </div>
+                <p>Username</p>
+            <div class="form" id="username">
+                <input type="text" name="usernameid" placeholder="Enter Username" size="40" required><b> <span class="formerror"></span></b>
+
+            </div>
+            <p>Password</p>
+            <div class="form" id="password">
+                <input type="password"  name="passwordid"  placeholder=" Enter Password"  size="40" required><span class="formerror"></span></b>
+            
+            </div>
+            <p>Confirm Password</p>
+           <div class="form" id="copassword">
+            <input type="password" name="copasswordid"  placeholder="Confirm Password" size="40" required><span class="formerror"></span></b>
+
+           </div>
+            
+            
+            <br>
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+            <input class="button" type="submit" value="Submit">
+            <!-- <button>Register</button> -->
+            <br>
+            <p>Already have an account? <a href="#">Sign in</a>.</p>
+            
+
+
+        </form> 
+    </center>
+    </div>
+</body>
+<script>
+    function seterror(id, error){
+        //sets error inside tag of id
+        element = document.getElementById(id);
+        element.getElementsByClassName('formerror')[0].innerHTML = error;
+    }
+    function validateform(){
+        var returnval = true;
+        //perform validation and if validation fails,set the value of returnval to false
+        var name = document.forms['form']["nameid"].value;
+        if (name.length<5){
+            seterror("name", "*Name is too sort!");
+            returnval = false;
+        }
+        var name = document.forms['form']["nameid"].value;
+        if (name.length == 0){
+            seterror("name", "*Name can't blank");
+            returnval = false;
+        }
+        var email = document.forms['form']["emailid"].value;
+        if (email.length>100){
+            seterror("email", "*Email not more than 100 word!");
+            returnval = false;
+        }
+        var phone = document.forms['form']["phoneid"].value;
+        if (phone.length>10){
+            seterror("phone", "*Mobile Number Should not more than 10 digit!");
+            returnval = false;
+        }
+        var username = document.forms['form']["usernameid"].value;
+        if (username.length<5){
+            seterror("username", "*User name atleast 5 letter!");
+            returnval = false;
+        }
+        var password = document.forms['form']["passwordid"].value;
+        if (password.length<6){
+            seterror("password", "*Password should be atleast 6 characters long");
+            returnval = false;
+        }
+        var copassword = document.forms['form']["copasswordid"].value;
+        if (copassword != password){
+            seterror("copassword", "*Password and confirm password should not be same!");
+            returnval = false;
+        }
+        return returnval;
+    }
+
+</script>
+</html>
