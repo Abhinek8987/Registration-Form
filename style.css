@@ -15,7 +15,7 @@ body{
     padding: 0;
     /* background: linear-gradient(135deg, orange 60%, cyan); */
     /* background-image: url('Background1.jpg'); */
-    background-image: url('background5.jpg');
+    background-image: url('Background5.jpg');
     background-repeat: no-repeat;
     background-position: scroll;
     width: 100%;
@@ -77,11 +77,35 @@ p{
     }
     
 }
+@media screen and (max-width: 495px){
+    body{
+          /* background:linear-gradient(.25turn, red, 60%, blue); */
+          background-image: url('background6.jpg');
+          background-repeat: no-repeat;
+          background-position: scroll;
+          width: 100%;
+          height: 100vh;
+          background-size: cover;
+         
+    }
+    
+}
 @media screen and (max-width: 800px){
     .container{
         /* background: linear-gradient(135deg, orange 60%, cyan);   */
         /*background-color: black;*/
         background-color:springgreen;
+    }
+
+
+}
+@media screen and (max-width: 587px){
+    .container{
+        /* background: linear-gradient(135deg, orange 60%, cyan);   */
+        /*background-color: black;*/
+        /* background-color:springgreen; */
+        background-color: transparent;
+        
     }
 
 
